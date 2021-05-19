@@ -1,44 +1,48 @@
 package com.mycompany.md4client;
 import java.net.*;
 import java.io.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class Connection {
-    private Socket clientSocket;
-    private PrintWriter out;
-    private BufferedReader in;
-    
-    public void startConnection(String ip, int port){
+    private String hostname;
+    private int port;
+    private String userName;
+    private boolean canWrite = true;
+ 
+    public Connection(String hostname, int port) {
+        this.hostname = hostname;
+        this.port = port;
+    }
+ 
+    public void execute() {
         try {
-            clientSocket = new Socket(ip, port);
-            out = new PrintWriter(clientSocket.getOutputStream(), true);
-            in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+            Socket socket = new Socket(hostname, port);
+ 
+            System.out.println("Connected to the chat server");
+            System.out.println("When you are ready, type 'Y' in order to start the game");
+            new ReadThread(socket, this).start();
+            new WriteThread(socket, this).start();
+ 
+        } catch (UnknownHostException ex) {
+            System.out.println("Server not found: " + ex.getMessage());
         } catch (IOException ex) {
-            Logger.getLogger(Connection.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("I/O Error: " + ex.getMessage());
         }
+ 
+    }
+ 
+    void setUserName(String userName) {
+        this.userName = userName;
+    }
+ 
+    String getUserName() {
+        return this.userName;
     }
     
-    public String sendMessage(String msg){
-        String resp = "";
-        try {
-            out.println(msg);
-            resp = in.readLine();
-            stopConnection();
-        } catch (IOException ex) {
-            Logger.getLogger(Connection.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return resp;
-
+    public boolean GetCanWrite(){
+        return canWrite;
     }
     
-    public void stopConnection(){
-        try {
-            in.close();
-            out.close();
-            clientSocket.close();
-        } catch (IOException ex) {
-            Logger.getLogger(Connection.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public void SetCanWrite(boolean value){
+        canWrite = value;
     }
 }

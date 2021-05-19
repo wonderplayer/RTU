@@ -1,5 +1,7 @@
-com\mycompany\md4server\Connection.class
-com\mycompany\md4server\IPlayer.class
-com\mycompany\md4server\Server.class
-com\mycompany\md4server\Game.class
-com\mycompany\md4server\Player.class
+com/mycompany/md4server/IPlayer.class
+com/mycompany/md4server/UserThread.class
+com/mycompany/md4server/Connection.class
+com/mycompany/md4server/Player.class
+com/mycompany/md4server/Game.class
+com/mycompany/md4server/IUserThread.class
+com/mycompany/md4server/Server.class

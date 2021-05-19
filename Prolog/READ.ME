@@ -1,0 +1,243 @@
+
+               WELCOME TO PC PROLOG VERSION 3.10
+               ---------------------------------
+
+  This README file contains necessary information about PC Prolog
+  Version 3.10 not included in the documentation at this time.
+  Please read this file in its entirety and refer to it if you have
+  any questions.
+
+
+TABLE OF CONTENTS
+-----------------
+ 1.  How to get support
+ 2.  Installing PC Prolog 3.10
+ 3.  Files on the Distribution Disks
+ 5.  Important Information
+ 6.  Compiling on a Two-Floppy Drive System
+
+
+1.  HOW TO GET TECHNICAL SUPPORT
+--------------------------------
+
+  If you have any problems, please read this file and the PC Prolog
+  manuals first.  If you still have a question and need assistance,
+  help is available from the following sources:
+
+    1.  Check with your local software dealer or users' group.
+
+    2.  Write to us at the following address:
+
+            Prolog Development Center Aps
+            H.J. Holst vej 5A
+            DK-2605 Br›ndby
+            Denmark
+
+
+    3.  If you have an urgent problem that cannot wait, you may call
+    	us at the number:
+
+		+45 1 72 10 22
+
+
+        Please have the following information ready before calling:
+
+          a.  Computer make, model, and the makes and model numbers
+              of any additional hardware.
+
+          b.  Operating system and version number. (The version number
+              can be determined by typing VER at the MS-DOS prompt.)
+
+          c.  Contents of your AUTOEXEC.BAT file.
+
+          d.  Contents of your CONFIG.SYS file.
+
+
+
+2.  INSTALLING PC PROLOG 3.10
+-----------------------------
+
+                           HARD DISK USERS
+                           ---------------
+
+  To install PC Prolog, enter the following command at the DOS
+  prompt (if your floppy is not in drive A, just substitute your
+  drive wherever you see A:).  Make sure that the hard disk is
+  the DEFAULT DRIVE.  You CANNOT install PC Prolog 3.10 from the
+  A or B drive!
+
+
+  At the DOS prompt for your HARD DISK enter:
+
+     A:INSTALL A: C:\PROLOG
+
+  If you want the prolog system installed in the directory c:\prolog
+
+
+  The DEMO and EXAMPLES disks contain a number of demonstration programs
+  and the examples from the manual, respectively. The installation
+  program will only copy the prolog system itself to the hard disk,
+  unless directed otherwise - just answer the questions as the program
+  is running. In any case, if you prefer to install the demo's on the
+  harddisk, they may easily be copied manually from the DEMO and the
+  EXAMPLES disks later on.
+
+
+
+                          FLOPPY DISK USERS
+                          -----------------
+
+  Make a backup copy of each of the five disks with the DOS 'diskcopy'
+  command, and keep the original disks in a safe place. Never use the
+  original disks as working copies.
+
+  To start the system place the disk with PROLOG.EXE in drive B:
+  and the disk with PROLOG.OVL in A:. Then make A: the current drive
+  and enter
+
+  	B:PROLOG
+
+  at the DOS prompt. When the system is running, you may remove the
+  PROLOG.EXE disk from drive B: and insert the DEMO or EXAMPLES disk,
+  or any other disk containing programs you wish to work with.
+
+
+
+                               ALL USERS
+                               ---------
+
+  After installation of the PC-Prolog system you should add
+
+     FILES=20		/* At least 10 */
+     BUFFERS=40		/* At least 20 */
+
+  to your CONFIG.SYS file.
+
+
+
+
+3.  FILES ON THE DISTRIBUTION DISKS
+-----------------------------------
+DISK 1:	PROLOG.EXE (Startup Disk)
+  PROLOG.EXE	Main executable code for the PC-Prolog system
+  READ.ME	This file
+  INSTALL.BAT	Installation program
+  BGI	<DIR>	BGI device drivers and fonts
+  BGIDEMO<DIR>	Demo of BGI graphic
+
+DISK 2:	PROLOG.OVL (Run disk)
+  PROLOG.OVL	Overlays for PC Prolog system
+  PROLOG.HLP	Help File
+  PROLOG.ERR	Error messages
+  PROLOG.SYS	Configuration for prolog system
+  INSTALL.BAT	Installation program
+
+DISK 3:	PROLOG.LIB (Library disk)
+  PROLOG.LIB
+  INIT.OBJ
+  INSTALL.BAT	Installation program
+
+DISK 4:	DEMO PROGRAMS (Demo Disk)
+  PIE	<DIR>	Prolog Inference Engine ( Appendix K )
+  REGISTER<DIR>	Database example
+  PROGRAMS<DIR>	Various programs
+  GENI	<DIR>	Small expert system ( Appendix H )
+  SEN_AN<DIR>	Sentence analyzer   ( Appendix G )
+  GEOBASE<DIR>	Natural language interface to USA geography ( Appendix F )
+  GRDEMO<DIR>	Demo of BGI graphics
+  DEMOTOOL<DIR>	Tools used by SEN_AN, GEOBASE and GENI
+  DIFF	<DIR>	Symbolic differentiation
+
+DISK 5:	EXAMPLES (Examples disk)
+  EXAMPLES<DIR>	Examples from the tutorial
+  REFEXAMP<DIR>	Examples from the reference part
+  ANSWERS<DIR>
+
+
+
+
+4.  IMPORTANT INFORMATION
+-------------------------
+
+ 1. BE CAREFUL NOT TO MIX FILES FROM 3.0 WITH THE FILES FROM 3.10 !
+
+ 2. All command-line options may be collected in the 'TPROLOG' DOS
+    environment variable. This may be set by means of the DOS 'SET'
+    command, which you will probably want to do from your
+    'AUTOEXEC.BAT' file by including a line of the following format:
+
+     set TPROLOG=-E<FileName> -S<SYS-File> -C[-] -X[-]
+
+    The E<FileName> specifies the name of a file to load when the
+    system starts. By default the file 'WORK.PRO' will be loaded,
+    if it exists in the current directory.
+
+    The S<SYS-File> specifies - with full pathname - which Prolog
+    system configuration file to load when the system is started.
+    Normally you will want to use the same file irrespective of
+    which directory or disk you're working from, namely the PROLOG.SYS
+    located in the directory where you installed the Prolog system.
+
+    If a SYS-file with the name PROLOG.SYS exists on the current
+    directory, then it will be loaded instead of the file specified
+    in the TPROLOG environment variable.
+
+    Option C enables or disables snowcheck, and option X enables or
+    disables high resolution textmodes. Both are off by default but
+    may be explicitly disabled by following the option with a minus.
+
+
+    Any command line parameters used when invoking the PC-Prolog
+    system will override the corresponding TPROLOG parameters.
+
+
+
+5.  GENERATING .EXE FILES ON A TWO-FLOPPY DRIVE SYSTEM
+------------------------------------------------------
+
+  For those using two floppy drives, in order to compile to an .EXE
+  file we recommend that you do the following:
+
+  Before starting you must copy LINK.EXE from your DOS utilities
+  diskette to the PROLOG.LIB disk.
+
+  Then follow the steps:
+
+  1.  In Drive A, place the PROLOG.EXE disk.  In Drive B, place the
+      PROLOG.OVL disk.
+
+  2.  Change directory to Drive B and enter A:PROLOG.
+
+  3.  Remove PROLOG.EXE disk from Drive A and insert a disk with your
+      source code (WORK disk).
+
+  4.  Select Setup/Directories from the main menu and change the
+      current directory and the obj directory to A:\.
+
+  5.  Load your source into the editor and select COMPILE/OBJ from the
+      main menu.  An object file and symbol file will be generated onto
+      your WORK disk.  (Once the source code is loaded into the
+      editor, a blank WORK disk may be used for generating your .OBJ
+      and .EXE files.)
+
+  6.  Remove WORK disk from the Drive A and insert your DOS disk and
+      enter ALT-D to shell into DOS.  Once at the DOS prompt, replace
+      the DOS disk with your WORK disk.
+
+  7.  Replace the PROLOG.OVL disk in Drive B with the PROLOG.LIB disk.
+
+  8.  Change Directory to Drive B.
+
+  9.  Enter:
+
+      link init A:<source file name>
+      		 [optional A:<other obj files>]
+      		 A:<source file name>.sym,
+      		 A:<executable file name>,,
+      		 Prolog+ [Optional other library files]
+
+      For instance, here's a simple example:
+       link init a:myprog a:myprog.sym, a:myprog,,prolog
+
+      Linking in a BGI driver example:
+       link init a:mygraph a:mygraph.sym,mygraph,,prolog+bgi

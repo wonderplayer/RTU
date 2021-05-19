@@ -1,5 +1,7 @@
-C:\Users\rolan\Documents\NetBeansProjects\RTU\MD4-Server\src\main\java\com\mycompany\md4server\Player.java
-C:\Users\rolan\Documents\NetBeansProjects\RTU\MD4-Server\src\main\java\com\mycompany\md4server\Game.java
-C:\Users\rolan\Documents\NetBeansProjects\RTU\MD4-Server\src\main\java\com\mycompany\md4server\Connection.java
-C:\Users\rolan\Documents\NetBeansProjects\RTU\MD4-Server\src\main\java\com\mycompany\md4server\IPlayer.java
-C:\Users\rolan\Documents\NetBeansProjects\RTU\MD4-Server\src\main\java\com\mycompany\md4server\Server.java
+/home/rolands/RTU/MD4-Server/src/main/java/com/mycompany/md4server/Connection.java
+/home/rolands/RTU/MD4-Server/src/main/java/com/mycompany/md4server/Server.java
+/home/rolands/RTU/MD4-Server/src/main/java/com/mycompany/md4server/UserThread.java
+/home/rolands/RTU/MD4-Server/src/main/java/com/mycompany/md4server/IUserThread.java
+/home/rolands/RTU/MD4-Server/src/main/java/com/mycompany/md4server/Player.java
+/home/rolands/RTU/MD4-Server/src/main/java/com/mycompany/md4server/Game.java
+/home/rolands/RTU/MD4-Server/src/main/java/com/mycompany/md4server/IPlayer.java

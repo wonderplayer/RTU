@@ -1,2 +1,2 @@
-com\mycompany\md4server\GameTest.class
-com\mycompany\md4server\StubPlayer.class
+com/mycompany/md4server/StubPlayer.class
+com/mycompany/md4server/GameTest.class

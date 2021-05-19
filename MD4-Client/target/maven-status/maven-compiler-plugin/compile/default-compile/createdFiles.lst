@@ -1,4 +1,6 @@
-com\mycompany\md4client\Client.class
-com\mycompany\md4client\Connection.class
-com\mycompany\md4client\IPlayer.class
-com\mycompany\md4client\Player.class
+com/mycompany/md4client/Player.class
+com/mycompany/md4client/ReadThread.class
+com/mycompany/md4client/WriteThread.class
+com/mycompany/md4client/Client.class
+com/mycompany/md4client/IPlayer.class
+com/mycompany/md4client/Connection.class

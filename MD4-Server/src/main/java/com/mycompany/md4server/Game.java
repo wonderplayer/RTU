@@ -1,7 +1,6 @@
 package com.mycompany.md4server;
 
 public class Game {
-
     private final int RANGE = 100;
     private final int NUMBER = 1 + (int) (Math.random() * RANGE);
     private boolean IsGameWon = false;
@@ -36,12 +35,12 @@ public class Game {
         return IsGameWon;
     }
 
-    public void GetPlayerResponses() {
-        for (int i = 0; i < Players.length; i++) {
-            System.out.println("Speletajs " + (i + 1) + " ievadiet skaitli: ");
-            Players[i].Respond();
-        }
-    }
+//    public void GetPlayerResponses() {
+//        for (int i = 0; i < Players.length; i++) {
+//            System.out.println("Speletajs " + (i + 1) + " ievadiet skaitli: ");
+//            Players[i].Respond();
+//        }
+//    }
 
     public void ProcessPlayerResponses() {
         IPlayer player;

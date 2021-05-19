@@ -1,4 +1,6 @@
-C:\Users\rolan\Documents\NetBeansProjects\RTU\MD4-Client\src\main\java\com\mycompany\md4client\Client.java
-C:\Users\rolan\Documents\NetBeansProjects\RTU\MD4-Client\src\main\java\com\mycompany\md4client\Connection.java
-C:\Users\rolan\Documents\NetBeansProjects\RTU\MD4-Client\src\main\java\com\mycompany\md4client\Player.java
-C:\Users\rolan\Documents\NetBeansProjects\RTU\MD4-Client\src\main\java\com\mycompany\md4client\IPlayer.java
+/home/rolands/RTU/MD4-Client/src/main/java/com/mycompany/md4client/Player.java
+/home/rolands/RTU/MD4-Client/src/main/java/com/mycompany/md4client/ReadThread.java
+/home/rolands/RTU/MD4-Client/src/main/java/com/mycompany/md4client/IPlayer.java
+/home/rolands/RTU/MD4-Client/src/main/java/com/mycompany/md4client/Client.java
+/home/rolands/RTU/MD4-Client/src/main/java/com/mycompany/md4client/Connection.java
+/home/rolands/RTU/MD4-Client/src/main/java/com/mycompany/md4client/WriteThread.java

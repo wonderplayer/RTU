@@ -7,9 +7,8 @@ public class Server {
     private static final Scanner Scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Connection server = new Connection();
-        server.start(9876);
-        
+        Connection server = new Connection(9876);
+        server.execute();
 /*
         System.out.println("Ievadiet speletaju skaitu:");
         int playerCount = Scanner.nextInt();
